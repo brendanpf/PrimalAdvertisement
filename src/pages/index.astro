@@ -30,13 +30,13 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Ethan Greene"
+					tagline="I am a Content Creator/Content manager from Donegal based out of Galway, Ireland."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
+						<Pill><Icon icon="paintbrush" size="1.33em" /> Content Creator</Pill>
+						<Pill><Icon icon="network" size="1.33em" /> Content Manager</Pill>
 						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
 					</div>
 				</Hero>
@@ -81,17 +81,16 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Testimonials</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Here is brief overview of some of the reviews & Testimonials i have recieved from both previous & current clients .
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['"Instert Review"-Client', '"Insert Review"- Client', '"Insert Review"- Client', '"Insert Review"- Client', '"Insert Review"-Client'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
