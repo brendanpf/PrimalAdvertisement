@@ -1,9 +1,10 @@
 ---
+import ContactCTA from '../components/ContactCTA.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout
 	title="Pricing | Ethan Greene"
-	description="Learn about Ethan Greene's rates for diffrent packages"
+	description="Learn about Ethan Greene's rates for different packages"
 >
 <div class="bg-white dark:bg-gray-900 py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -133,8 +134,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <a href="#" class="mt-10 block w-full rounded-md bg-indigo-600 dark:bg-indigo-500 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 dark:hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400">Get access</a>
           </div>
         </div>
-        
       </div>
     </div>
-  </div>  
+  </div>
+
+  <ContactCTA />
 </BaseLayout>
