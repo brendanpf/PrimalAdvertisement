@@ -7,7 +7,8 @@
   <div class="pricing-options">
       
       <!-- Pricing Option 1 -->
-      <div class="pricing-option">
+      <div class="pricing-reactive">
+        <div class="pricing-option">
           <div>
               <h3>Basic Plan</h3>
               <p>Access to the basic features to get started.</p>
@@ -63,9 +64,11 @@
               <a href="#" class="access-button">Get access</a>
           </div>
       </div>
+      </div>
 
       <!-- Pricing Option 2 -->
-      <div class="pricing-option">
+      <div class="pricing-reactive">
+        <div class="pricing-option">
           <div>
               <h3>Standard Plan</h3>
               <p>Ideal for small businesses and startups.</p>
@@ -121,9 +124,11 @@
               <a href="#" class="access-button">Get access</a>
           </div>
       </div>
+      </div>
 
       <!-- Pricing Option 3 -->
-      <div class="pricing-option">
+      <div class="pricing-reactive">
+        <div class="pricing-option">
           <div>
               <h3>Custom Package</h3>
               <p>Customisable package, based on clients preferences.</p>
@@ -179,6 +184,7 @@
               <a href="#" class="access-button">Get access</a>
           </div>
       </div>
+      </div>
   </div>
 </div>
 
@@ -213,6 +219,17 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;
+}
+
+.pricing-reactive {
+  border-radius: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Ensure that the hover effects don't affect surrounding elements */
+}
+
+.pricing-reactive:hover {
+  transform: scale(1.03); /* Reduce scale to minimize layout shift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 }
 
 

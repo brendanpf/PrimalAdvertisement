@@ -71,11 +71,13 @@ const projects = (await getCollection('work'))
 					</Grid>
 				</div>
 
-				<div class="cta">
+				<div class="reactive-view-all">
+					<div class="cta">
 					<CallToAction href="/work/">
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
+				    </div>
 				</div>
 			</section>
 
@@ -123,6 +125,16 @@ const projects = (await getCollection('work'))
 		object-position: top;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
+	}
+
+	.reactive-view-all {
+	  border-radius: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; /* Ensure that the hover effects don't affect surrounding elements */
+	}
+
+	.reactive-view-all:hover {
+		transform: scale(1.03); /* Reduce scale to minimize layout shift */
 	}
 
 	@media (min-width: 50em) {

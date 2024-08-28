@@ -5,10 +5,12 @@ import Icon from './Icon.astro';
 
 <aside>
 	<h2>Interested in working together?</h2>
-	<CallToAction href="mailto:ethan@primaladvertisement.com">
+	<div class="footer-reactive">
+		<CallToAction href="mailto:ethan@primaladvertisement.com">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />
 	</CallToAction>
+</div>
 </aside>
 
 <style>
@@ -28,6 +30,17 @@ import Icon from './Icon.astro';
 		font-size: var(--text-xl);
 		text-align: center;
 		max-width: 15ch;
+	}
+
+	.footer-reactive {
+		border-radius: 34px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; /* Ensure that the hover effects don't affect surrounding elements */
+	}
+
+	.footer-reactive:hover {
+		transform: scale(1.03); /* Reduce scale to minimize layout shift */
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
 	}
 
 	@media (min-width: 50em) {
