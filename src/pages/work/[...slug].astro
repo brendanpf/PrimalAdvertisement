@@ -17,7 +17,7 @@ interface Props {
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
 	const work = await getCollection('work');
-	return work.map((entry) => ({
+	return work.map((entry: { slug: any; }) => ({
 		params: { slug: entry.slug },
 		props: { entry },
 	}));
@@ -36,7 +36,7 @@ const { Content } = await entry.render();
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
-								{entry.data.tags.map((t) => <Pill>{t}</Pill>)}
+								{entry.data.tags.map((t: unknown) => <Pill>{t}</Pill>)}
 							</div>
 							<p class="description">{entry.data.description}</p>
 						</div>

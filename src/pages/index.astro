@@ -18,7 +18,7 @@ import Skills from '../components/Skills.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
-	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
+	.sort((a: { data: { publishDate: number; }; }, b: { data: { publishDate: number; }; }) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
 // Full Astro Component Syntax:
@@ -62,7 +62,7 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="offset">
 						{
-							projects.map((project) => (
+							projects.map((project: any) => (
 								<li>
 									<PortfolioPreview project={project} />
 								</li>
