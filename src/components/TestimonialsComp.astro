@@ -158,47 +158,53 @@
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.querySelector('.testimonial-slider');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-
-    if (slider && prevButton && nextButton) {
+    function initializeTestimonialSlider() {
+      console.log('initializeTestimonialSlider called');
+      const slider = document.querySelector('.testimonial-slider');
+      const prevButton = document.querySelector('.prev-button');
+      const nextButton = document.querySelector('.next-button');
+  
+      if (slider && prevButton && nextButton) {
+        const nonNullSlider = slider;
         let currentIndex = 0;
-        const testimonials = Array.from(slider.children); 
+        const testimonials = Array.from(nonNullSlider.children);
         const totalTestimonials = testimonials.length;
-
+  
+        // Exit if no testimonials are found
+        if (testimonials.length === 0) return;
+  
         function updateSliderPosition() {
-            // Calculate the width of each testimonial dynamically
-            const testimonialWidth = testimonials[0].clientWidth;
-            // Scroll to the current testimonial position
-            slider!.scrollTo({
-                left: currentIndex * testimonialWidth,
-                behavior: 'smooth'
-            });
+          const testimonialWidth = (testimonials[0] as HTMLElement).clientWidth;
+          nonNullSlider.scrollTo({
+            left: currentIndex * testimonialWidth,
+            behavior: 'smooth'
+          });
         }
-
+  
         prevButton.addEventListener('click', () => {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = totalTestimonials - 1; // Go to the last testimonial
-            }
-            updateSliderPosition();
+          if (currentIndex > 0) {
+            currentIndex--;
+          } else {
+            currentIndex = totalTestimonials - 1;
+          }
+          updateSliderPosition();
         });
-
+  
         nextButton.addEventListener('click', () => {
-            if (currentIndex < totalTestimonials - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0; // Go to the first testimonial
-            }
-            updateSliderPosition();
+          if (currentIndex < totalTestimonials - 1) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          updateSliderPosition();
         });
-
-    } else {
+      } else {
         console.error('Slider or control buttons not found in the DOM');
+      }
     }
-});
-
-</script>
+  
+    document.addEventListener('DOMContentLoaded', initializeTestimonialSlider);
+    document.addEventListener('astro:after-swap', initializeTestimonialSlider);
+  </script>
+  
+  

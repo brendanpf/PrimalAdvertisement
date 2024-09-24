@@ -69,27 +69,36 @@ import Icon from './Icon.astro';
 
 <script>
 	class ThemeToggle extends HTMLElement {
-		constructor() {
-			super();
-
-			const button = this.querySelector('button')!;
-
-			/** Set the theme to dark/light mode. */
-			const setTheme = (dark: boolean) => {
-				document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
-				button.setAttribute('aria-pressed', String(dark));
-			};
-
-			// Toggle the theme when a user clicks the button.
-			button.addEventListener('click', () => setTheme(!this.isDark()));
-
-			// Initialize button state to reflect current theme.
-			setTheme(this.isDark());
-		}
-
-		isDark() {
-			return document.documentElement.classList.contains('theme-dark');
-		}
+	  constructor() {
+		super();
+  
+		const button = this.querySelector('button');
+  
+		/** Set the theme to dark/light mode and save preference */
+		const setTheme = (dark: boolean | undefined) => {
+		  document.documentElement.classList.toggle('theme-dark', dark);
+		  button!.setAttribute('aria-pressed', String(dark));
+		  // Save preference
+		  localStorage.setItem('theme', dark ? 'dark' : 'light');
+		};
+  
+		/** Determine if the dark theme should be applied */
+		const isDark = () => {
+		  const storedTheme = localStorage.getItem('theme');
+		  if (storedTheme) {
+			return storedTheme === 'dark';
+		  }
+		  // Default to system preference or light theme
+		  return window.matchMedia('(prefers-color-scheme: dark)').matches;
+		};
+  
+		// Initialize theme based on stored preference or system setting
+		setTheme(isDark());
+  
+		// Toggle the theme when the user clicks the button
+		button!.addEventListener('click', () => setTheme(!isDark()));
+	  }
 	}
 	customElements.define('theme-toggle', ThemeToggle);
-</script>
+  </script>
+  
