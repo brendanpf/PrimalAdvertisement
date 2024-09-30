@@ -157,7 +157,7 @@
 
 </style>
 
-<script>
+<script is:inline data-astro-reload>
     function initializeTestimonialSlider() {
       console.log('initializeTestimonialSlider called');
       const slider = document.querySelector('.testimonial-slider');
@@ -165,37 +165,27 @@
       const nextButton = document.querySelector('.next-button');
   
       if (slider && prevButton && nextButton) {
-        const nonNullSlider = slider;
         let currentIndex = 0;
-        const testimonials = Array.from(nonNullSlider.children);
+        const testimonials = Array.from(slider.children);
         const totalTestimonials = testimonials.length;
   
-        // Exit if no testimonials are found
         if (testimonials.length === 0) return;
   
         function updateSliderPosition() {
-          const testimonialWidth = (testimonials[0] as HTMLElement).clientWidth;
-          nonNullSlider.scrollTo({
+          const testimonialWidth = testimonials[0].clientWidth;
+          slider.scrollTo({
             left: currentIndex * testimonialWidth,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
   
         prevButton.addEventListener('click', () => {
-          if (currentIndex > 0) {
-            currentIndex--;
-          } else {
-            currentIndex = totalTestimonials - 1;
-          }
+          currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalTestimonials - 1;
           updateSliderPosition();
         });
   
         nextButton.addEventListener('click', () => {
-          if (currentIndex < totalTestimonials - 1) {
-            currentIndex++;
-          } else {
-            currentIndex = 0;
-          }
+          currentIndex = (currentIndex < totalTestimonials - 1) ? currentIndex + 1 : 0;
           updateSliderPosition();
         });
       } else {
@@ -203,8 +193,6 @@
       }
     }
   
-    document.addEventListener('DOMContentLoaded', initializeTestimonialSlider);
-    document.addEventListener('astro:after-swap', initializeTestimonialSlider);
+    // Initialize the slider
+    initializeTestimonialSlider();
   </script>
-  
-  
