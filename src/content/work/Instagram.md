@@ -1,7 +1,7 @@
 ---
 title: Instagram
 publishDate: 2020-03-02 00:00:00
-img: /assets/stock-1.jpg
+img: Brendan-Final-Project/assets/stock-1.jpg
 img_alt: baby blue background with instagram logo
 description: |
  In the digital age, Instagram has become a vital platform for businesses looking to expand their reach and engage with potential customers. With over 2 billion monthly active users, it’s more than just a photo-sharing app; it’s a space where brands can build relationships, tell their stories, and showcase their offerings in an impactful way. So, how can your business make the most of Instagram? Our social media management and content creation agency is here to guide you every step of the way.
