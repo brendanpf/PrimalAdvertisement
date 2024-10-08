@@ -8,7 +8,6 @@ export default defineConfig({
   base: '/Brendan-Final-Project/',
   integrations: [
     tailwind(),
-    [github()],
     react() 
   ],
 });
