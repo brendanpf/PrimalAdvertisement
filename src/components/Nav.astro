@@ -24,8 +24,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 <nav>
 	<div class="menu-header">
 		<a href="/Brendan-Final-Project/home/" class="site-title">
-			<Icon icon="home" color="var(--accent-regular)" size="1.6em" gradient />
-			Primal Advertisement
+			<Icon icon="home" color="var(--accent-regular)" size="3em" gradient />
+			<h4>Primal Advertisement</h4>
 		</a>
 		<menu-button>
 			<template>
@@ -144,6 +144,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
 				setExpanded(e.matches);
 				btn.hidden = e.matches;
+
+				// Ensure the menu doesn't overflow for small screens
+				if (!e.matches) {
+				    menu.style.overflowX = 'auto';
+				}
 			};
 			const mediaQueries = window.matchMedia('(min-width: 50em)');
 			handleViewports(mediaQueries);
@@ -160,6 +165,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		font-family: var(--font-brand);
 		font-weight: 500;
 		margin-bottom: 3.5rem;
+		padding: 0 1rem; /* Add padding to the sides to prevent overflow */
+		box-sizing: border-box; /* Make sure all padding is accounted for */
 	}
 
 	.menu-header {
@@ -167,6 +174,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		justify-content: space-between;
 		gap: 0.5rem;
 		padding: 1.5rem;
+		flex-wrap: wrap; /* This will ensure elements wrap properly */
 	}
 
 	.site-title {
@@ -176,6 +184,12 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		line-height: 1.1;
 		color: var(--gray-0);
 		text-decoration: none;
+	}
+
+	@media (max-width: 50em) {
+		.site-title {
+			font-size: var(--text-sm); /* Decrease size for smaller screens */
+		}
 	}
 
 	.menu-button {
