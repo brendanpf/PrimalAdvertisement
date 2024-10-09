@@ -24,8 +24,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 <nav>
 	<div class="menu-header">
 		<a href="/Brendan-Final-Project/home/" class="site-title">
-			<Icon icon="home" color="var(--accent-regular)" size="3em" gradient />
-			<h4>Primal Advertisement</h4>
+			<Icon icon="home" color="var(--accent-regular)" size="1.6em" gradient />
+			Primal Advertisement
 		</a>
 		<menu-button>
 			<template>
@@ -145,10 +145,6 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				setExpanded(e.matches);
 				btn.hidden = e.matches;
 
-				// Ensure the menu doesn't overflow for small screens
-				if (!e.matches) {
-				    menu.style.overflowX = 'auto';
-				}
 			};
 			const mediaQueries = window.matchMedia('(min-width: 50em)');
 			handleViewports(mediaQueries);
@@ -174,23 +170,24 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		justify-content: space-between;
 		gap: 0.5rem;
 		padding: 1.5rem;
-		flex-wrap: wrap; /* This will ensure elements wrap properly */
 	}
+
+	.menu-header menu-button {
+        flex-shrink: 0; /* Prevents the menu button from shrinking */
+    }
 
 	.site-title {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		line-height: 1.1;
-		color: var(--gray-0);
-		text-decoration: none;
-	}
+		font-size: 3em;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        line-height: 1.1;
+        color: var(--gray-0);
+        text-decoration: none;
+        flex: 1 1 auto; /* Allows flex item to grow and shrink */
+        min-width: 0;   /* Prevents overflow by allowing it to shrink below its content size */
+    }
 
-	@media (max-width: 50em) {
-		.site-title {
-			font-size: var(--text-sm); /* Decrease size for smaller screens */
-		}
-	}
 
 	.menu-button {
 		position: relative;
