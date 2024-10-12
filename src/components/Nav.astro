@@ -9,7 +9,8 @@ const textLinks: { label: string; href: string }[] = [
 	{ label: 'Work', href: '/Brendan-Final-Project/work/' },
 	{ label: 'About', href: '/Brendan-Final-Project/about/' },
 	{ label: 'Testimonials', href:'/Brendan-Final-Project/testimonials/'},
-	{ label: 'Pricing', href:'/Brendan-Final-Project/pricing/'}
+	{ label: 'Pricing', href:'/Brendan-Final-Project/pricing/'},
+	{ label: 'Contact', href:'/Brendan-Final-Project/contact/'}
 ];
 
 /** Icon links to social media */
@@ -146,7 +147,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				btn.hidden = e.matches;
 
 			};
-			const mediaQueries = window.matchMedia('(min-width: 66em)');
+			const mediaQueries = window.matchMedia('(min-width: 75em)');
 			handleViewports(mediaQueries);
 			mediaQueries.addEventListener('change', handleViewports);
 		}
@@ -288,7 +289,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		height: calc(var(--icon-size) + 2 * var(--icon-padding));
 	}
 
-	@media (min-width: 66em) {
+	@media (min-width: 75em) {
 		nav {
 			display: grid;
 			grid-template-columns: 1fr auto 1fr;
@@ -363,7 +364,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		}
 	}
 
-	@media (min-width: 69em) {
+	@media (min-width: 79em) {
 		.socials {
 			display: flex;
 			justify-content: flex-end;
