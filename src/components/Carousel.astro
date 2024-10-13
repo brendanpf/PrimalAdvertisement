@@ -1,0 +1,212 @@
+<div class="caseStudy-section">
+  <h2 class="caseStudy-header">Case Study</h2>
+
+  <div class="caseStudy-slider">
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-1.jpg" alt="Case Study 1" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-2.jpg" alt="Case Study 2" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-3.jpg" alt="Case Study 3" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-4.jpg" alt="Case Study 4" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-5.jpg" alt="Case Study 5" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-6.jpg" alt="Case Study 6" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-7.jpg" alt="Case Study 7" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-8.jpg" alt="Case Study 8" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-9.jpg" alt="Case Study 9" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-10.jpg" alt="Case Study 10" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item">
+          <img src="/Brendan-Final-Project/assets/caseStudy/case-study-11.jpg" alt="Case Study 11" class="caseStudy-showcase-image">
+      </div>
+
+      <div class="caseStudy-item-link">
+          <a href="mailto:ethan@primaladvertisement.com"><img src="/Brendan-Final-Project/assets/caseStudy/case-study-12.jpg" alt="Case Study 12" class="caseStudy-showcase-image">
+          </a>
+      </div>
+  </div>
+
+  <!-- Slider Controls -->
+  <div class="caseStudy-controls">
+      <button class="prev-button">Previous</button>
+      <button class="next-button">Next</button>
+  </div>
+</div>
+
+<style>
+.caseStudy-section {
+    max-width: 100%; /* Make sure this is fluid */
+    margin: auto;
+    padding: 48px 16px;
+    text-align: center;
+}
+
+.caseStudy-slider {
+    display: flex;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    width: 100%; /* Ensure the slider is fluid */
+    max-width: 100%; /* Important for keeping it responsive */
+}
+
+.caseStudy-item {
+    flex: 0 0 100%; /* This ensures each item takes up 100% width of the parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 32px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 8px;
+    max-width: 100%; /* Ensure this is set */
+}
+
+.caseStudy-item-link {
+    flex: 0 0 100%; /* This ensures each item takes up 100% width of the parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 32px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+    margin: 0 8px;
+    max-width: 100%; /* Ensure this is set */
+}
+
+.caseStudy-item-link:hover {
+    transform: scale(1.05);
+}
+
+.caseStudy-showcase-image {
+    max-width: 100%; /* Ensures the image doesn't exceed the parent container's width */
+    height: auto; /* Keeps the aspect ratio of the image intact */
+    border-radius: 12px;
+    object-fit: cover; /* Ensures the image scales properly without distortion */
+}
+
+.caseStudy-controls button {
+    background-color: #60a5fa;
+    color: white;
+    padding: 8px 16px; /* Keep this consistent across all screen sizes */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1rem; /* Font size remains the same */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.caseStudy-controls button:hover {
+    background-color: #3b82f6;
+}
+
+@media (max-width: 1040px) {
+    .caseStudy-item {
+        padding: 24px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .caseStudy-item {
+        padding: 24px;
+        width: 100%; /* Ensure it takes the full width of the screen */
+    }
+
+    .caseStudy-showcase-image {
+        max-width: 100%; /* Ensure image scales within mobile screen */
+        height: auto;
+    }
+
+    .caseStudy-controls button {
+        padding: 6px 12px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .caseStudy-item {
+        padding: 16px;
+        width: 100%; /* Ensure the case study container doesn't overflow */
+    }
+
+    .caseStudy-showcase-image {
+        max-width: 100%; /* Image should stay within the viewport */
+        height: auto;
+    }
+
+    .caseStudy-controls button {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+}
+</style>
+
+<script is:inline data-astro-reload>
+  function initializeCaseStudySlider() {
+      const slider = document.querySelector('.caseStudy-slider');
+      const prevButton = document.querySelector('.prev-button');
+      const nextButton = document.querySelector('.next-button');
+
+      if (slider && prevButton && nextButton) {
+          let currentIndex = 0;
+          const caseStudies = Array.from(slider.children);
+          const totalCaseStudies = caseStudies.length;
+
+          if (caseStudies.length === 0) return;
+
+          function updateSliderPosition() {
+              const caseStudyWidth = slider.clientWidth;
+              slider.scrollTo({
+                  left: currentIndex * caseStudyWidth,
+                  behavior: 'smooth',
+              });
+          }
+
+          prevButton.addEventListener('click', () => {
+              currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalCaseStudies - 1;
+              updateSliderPosition();
+          });
+
+          nextButton.addEventListener('click', () => {
+              currentIndex = (currentIndex < totalCaseStudies - 1) ? currentIndex + 1 : 0;
+              updateSliderPosition();
+          });
+
+          window.addEventListener('resize', updateSliderPosition);
+      } else {
+          console.error('Slider or control buttons not found in the DOM');
+      }
+  }
+
+  // Initialize the slider
+  initializeCaseStudySlider();
+</script>

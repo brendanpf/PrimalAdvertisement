@@ -15,6 +15,7 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
+import Carousel from '../components/Carousel.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -80,27 +81,8 @@ const projects = (await getCollection('work'))
 				    </div>
 				</div>
 			</section>
-
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Testimonials</h3>
-					<p>
-						I have had the honour of working with several individual clients and companies.
-					</p>
-				</header>
-
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['"Instert Review"-Client', '"Insert Review"- Client', '"Insert Review"- Client', '"Insert Review"- Client', '"Insert Review"-Client'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
-				</div>
-			</section>
+			
+			<Carousel />
 		</main>
 
 		<ContactCTA />
