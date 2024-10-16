@@ -4,7 +4,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'primaladvertisement.com/',
+  site: 'http://primaladvertisement.com/',
   base: '/PrimalAdvertisement/',
   integrations: [
     tailwind(),
