@@ -66,8 +66,8 @@ const { title, description } = Astro.props;
     <style>
       :root {
         --_placeholder-bg: linear-gradient(transparent, transparent);
-        --bg-image-main: url('/Brendan-Final-Project/assets/backgrounds/bg-main-light-800w.jpg');
-        --bg-image-main-curves: url('/Brendan-Final-Project/assets/backgrounds/bg-main-light.svg');
+        --bg-image-main: url('/PrimalAdvertisement/assets/backgrounds/bg-main-light-800w.jpg');
+        --bg-image-main-curves: url('/PrimalAdvertisement/assets/backgrounds/bg-main-light.svg');
         --bg-image-subtle-1: var(--_placeholder-bg);
         --bg-image-subtle-2: var(--_placeholder-bg);
         --bg-image-footer: var(--_placeholder-bg);
@@ -80,29 +80,29 @@ const { title, description } = Astro.props;
       }
 
       :root.theme-dark {
-        --bg-image-main: url('/Brendan-Final-Project/assets/backgrounds/bg-main-dark-800w.jpg');
-        --bg-image-main-curves: url('/Brendan-Final-Project/assets/backgrounds/bg-main-dark.svg');
+        --bg-image-main: url('/PrimalAdvertisement/assets/backgrounds/bg-main-dark-800w.jpg');
+        --bg-image-main-curves: url('/PrimalAdvertisement/assets/backgrounds/bg-main-dark.svg');
         --bg-svg-blend-mode: darken;
         --bg-blend-mode: lighten;
       }
 
       :root.loaded {
-        --bg-image-subtle-1: url('/Brendan-Final-Project/assets/backgrounds/bg-subtle-1-light-800w.jpg');
-        --bg-image-subtle-2: url('/Brendan-Final-Project/assets/backgrounds/bg-subtle-2-light-800w.jpg');
-        --bg-image-footer: url('/Brendan-Final-Project/assets/backgrounds/bg-footer-light-800w.jpg');
+        --bg-image-subtle-1: url('/PrimalAdvertisement/assets/backgrounds/bg-subtle-1-light-800w.jpg');
+        --bg-image-subtle-2: url('/PrimalAdvertisement/assets/backgrounds/bg-subtle-2-light-800w.jpg');
+        --bg-image-footer: url('/PrimalAdvertisement/assets/backgrounds/bg-footer-light-800w.jpg');
       }
 
       :root.loaded.theme-dark {
-        --bg-image-subtle-1: url('/Brendan-Final-Project/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
-        --bg-image-subtle-2: url('/Brendan-Final-Project/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
-        --bg-image-footer: url('/Brendan-Final-Project/assets/backgrounds/bg-footer-dark-800w.jpg');
+        --bg-image-subtle-1: url('/PrimalAdvertisement/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
+        --bg-image-subtle-2: url('/PrimalAdvertisement/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
+        --bg-image-footer: url('/PrimalAdvertisement/assets/backgrounds/bg-footer-dark-800w.jpg');
       }
 
       .backgrounds {
         min-height: 100%;
         isolation: isolate;
         background:
-          url('/Brendan-Final-Project/assets/backgrounds/noise.png') top center/220px repeat,
+          url('/PrimalAdvertisement/assets/backgrounds/noise.png') top center/220px repeat,
           var(--bg-image-footer) bottom center/var(--bg-gradient-size) no-repeat,
           var(--bg-image-main-curves) top center/var(--bg-gradient-size) no-repeat,
           var(--bg-image-main) top center/var(--bg-gradient-size) no-repeat,

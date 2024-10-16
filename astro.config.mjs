@@ -4,8 +4,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://brendanpf.github.io/Brendan-Final-Project/',
-  base: '/Brendan-Final-Project/',
+  site: 'https://brendanpf.github.io//',
+  base: '//',
   integrations: [
     tailwind(),
     react() 

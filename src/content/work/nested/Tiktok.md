@@ -1,7 +1,7 @@
 ---
 title: TikTok
 publishDate: 2020-03-04 00:00:00
-img: /Brendan-Final-Project/assets/stock-3.jpg
+img: /PrimalAdvertisement/assets/stock-3.jpg
 img_alt: baby blue background with tiktok logo
 description: |
   In today’s fast-paced digital landscape, TikTok has emerged as a powerhouse platform for businesses looking to elevate their brand awareness and engage with a vibrant community. With over a billion active users, TikTok offers unparalleled opportunities for creativity, connection, and conversion. But how can your business harness this platform effectively? That’s where our social media management and content creation agency comes in.
