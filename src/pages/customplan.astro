@@ -1,0 +1,269 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Icon from "../components/Icon.astro";
+---
+
+<BaseLayout 
+title='Contact | Primal Advertisment' 
+description='Get in contact with Ethan Greene'
+>
+
+<div class="stack gap-20 lg:gap-48">
+    <div class="wrapper stack gap-8 lg:gap-20">
+      <header class="hero">
+        <div class="hero-content">
+          <h1 class="hero-title">Contact for Custom Plan</h1>
+          <p class="hero-description">
+            "I would love the opportunity to connect with you! You’ve selected the Custom Plan. Please fill out the form below, and I’ll get back to you as soon as possible. You can also reach me through the contact information provided."
+          </p>
+        </div>
+        <img
+          alt="Contact Us"
+          width="480"
+          height="620"
+          src="/Brendan-Final-Project/assets/contact.jpg"
+        />
+      </header>
+
+      <section class="contact-form-section">
+        <h2>Contact Me</h2>
+        <form class="contact-form" action="https://formspree.io/f/movqqvlv" method="POST">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject:</label>
+            <!-- Pre-filled Subject field for the Custom Plan -->
+            <input type="text" id="subject" name="subject" value="Custom Plan Inquiry" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message:</label>
+            <!-- Pre-filled Message field for the Custom Plan -->
+            <textarea id="message" name="message" rows="5" required>Hello there! I am interested in the Custom Plan. Can you please provide more details.</textarea>
+          </div>
+          <br>
+          <div class="form-submit">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="contact-details-section">
+        <h2>Contact Information</h2>
+        <ul class="contact-info">
+          <li>
+            <Icon icon="envelope" size="1.33em" /> Email: <a href="mailto:ethan@primaladvertisement.com">ethan@primaladvertisement.com</a>
+          </li>
+          <li>
+            <Icon icon="phone" size="1.33em" /> Phone: (086) 175-1012
+          </li>
+          <li>
+            <Icon icon="mapmarker" size="1.33em" /> Location: Co.Galway, Ireland.
+          </li>
+        </ul>
+
+        <div class="social-media-links">
+          <h3>Follow Me</h3>
+          <div class="socials">
+            <a href="https://x.com/" class="social"><Icon icon="twitter-logo" /></a>
+            <a href="https://www.youtube.com" class="social"><Icon icon="youtube-logo" /></a>
+            <a href="https://www.instagram.com/itsethpgreene/" class="social"><Icon icon="instagram-logo" /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+      <section class="contact-details-section">
+        <h2>Contact Information</h2>
+        <ul class="contact-info">
+          <li>
+            <Icon icon="envelope" size="1.33em" /> Email: <a href="mailto:ethan@primaladvertisement.com">ethan@primaladvertisement.com</a>
+          </li>
+          <li>
+            <Icon icon="phone" size="1.33em" /> Phone: (086) 175-1012
+          </li>
+          <li>
+            <Icon icon="mapmarker" size="1.33em" /> Location: Co.Galway, Ireland.
+          </li>
+        </ul>
+
+        <div class="social-media-links">
+          <h3>Follow Me</h3>
+          <div class="socials">
+            <a href="https://x.com/" class="social"><Icon icon="twitter-logo" /></a>
+            <a href="https://www.youtube.com" class="social"><Icon icon="youtube-logo" /></a>
+            <a href="https://www.instagram.com/itsethpgreene/" class="social"><Icon icon="instagram-logo" /></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <style>
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      text-align: center;
+    }
+  
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: var(--gray-100);
+    }
+  
+    .hero-description {
+      font-size: 1.75rem;
+      color: var(--gray-300);
+    }
+  
+    .hero img {
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+  
+    @media (min-width: 50em) {
+      .hero {
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+        padding-inline: 2.5rem;
+        gap: 3.75rem;
+      }
+  
+      .hero-content {
+        text-align: left; /* Align text left when in grid layout */
+      }
+  
+      .hero img {
+        justify-self: flex-end; /* Align the image to the right */
+      }
+    }
+  
+    .contact-form-section {
+      display: grid;
+      gap: 2rem;
+      background-color: var(--gray-999);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+  
+    .contact-form h2 {
+      font-size: 2rem;
+      color: var(--gray-100);
+    }
+  
+    .contact-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .contact-form label {
+      font-size: 1rem;
+      color: var(--gray-300);
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid var(--gray-800);
+      background-color: var(--gray-900);
+      color: var(--gray-100);
+    }
+  
+    .contact-form button {
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent-regular);
+      color: var(--gray-0);
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+  
+    .contact-details-section {
+      background-color: var(--gray-999);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+  
+    .contact-details-section h2 {
+      font-size: 2rem;
+      color: var(--gray-100);
+    }
+  
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+      color: var(--gray-300);
+      font-size: 1rem;
+    }
+  
+    .contact-info li {
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .social-media-links {
+      margin-top: 2rem;
+    }
+  
+    .social-media-links h3 {
+      font-size: 1.5rem;
+      color: var(--gray-100);
+    }
+  
+    .socials {
+      display: flex;
+      gap: 1rem;
+      font-size: 2rem;
+    }
+  
+    .social {
+      color: var(--accent-regular);
+      transition: color 0.3s;
+    }
+  
+    .social:hover {
+      color: var(--accent-text-over);
+    }
+  
+    @media (min-width: 50em) {
+      .contact-form-section,
+      .contact-details-section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      .contact-form h2,
+      .contact-details-section h2 {
+        font-size: 2.5rem;
+      }
+  
+      .contact-info li {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
+
+  <br>
+  <ContactCTA />
+</BaseLayout>
