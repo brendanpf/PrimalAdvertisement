@@ -61,9 +61,67 @@ const { title, description } = Astro.props;
 		// Reapply background images after view transitions
 		document.addEventListener('astro:after-swap', applyBackgrounds);
 	</script>
-	  
+
+<script>
+  function setupReturnToTopButton() {
+    // Get the button element
+    const topButton = document.getElementById('return-to-top');
+
+    // Check if the button exists
+    if (topButton) {
+      // Show or hide the button based on scroll position
+      window.onscroll = function () {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          topButton.style.display = "block";
+        } else {
+          topButton.style.display = "none";
+        }
+      };
+
+      // Scroll to the top when the button is clicked
+      topButton.addEventListener('click', function () {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scroll to top
+        });
+      });
+    } else {
+      console.error("Return-to-top button not found!");
+    }
+  }
+
+  // Ensure the script runs after the initial load
+  document.addEventListener('DOMContentLoaded', setupReturnToTopButton);
+
+  // Hook into Astro's view transitions to reinitialize the button after every transition
+  document.addEventListener('astro:page-load', setupReturnToTopButton);
+</script>
 
     <style>
+       .return-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none; /* Hidden by default */
+        width: 70px; /* Width and height for the round button */
+        height: 70px;
+        background-color: #89CFF0;
+        color: white;
+        border: none;
+        border-radius: 50%; /* Makes it round */
+        cursor: pointer;
+        font-size: 24px; /* Bigger font size for the arrow */
+        z-index: 1000; /* Ensure it stays on top of other content */
+        text-align: center; /* Center the arrow */
+        line-height: 50px; /* Vertically center the arrow */
+         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        transition: background-color 0.3s ease; /* Smooth color transition */
+        }
+
+        .return-to-top:hover {
+          background-color: #2980b9;
+        }
+
       :root {
         --_placeholder-bg: linear-gradient(transparent, transparent);
         --bg-image-main: url('/assets/backgrounds/bg-main-light-800w.jpg');
@@ -115,5 +173,6 @@ const { title, description } = Astro.props;
         opacity: 1.00;
       }
     </style>
+    <button id="return-to-top" class="return-to-top">↑ Top</button>
   </body>
 </html>
