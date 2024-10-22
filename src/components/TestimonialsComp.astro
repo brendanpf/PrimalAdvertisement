@@ -1,3 +1,6 @@
+---
+import '../styles/TestimonialsComp.css';
+---
 <div class="testimonial-section">
     <h2 class="testimonial-header">What Our Clients Say</h2>
 
@@ -47,131 +50,6 @@
         <button class="next-button">Next</button>
     </div>
 </div>
-
-<style>
-    .testimonial-section {
-        max-width: 1152px;
-        margin: auto;
-        padding: 48px 16px;
-        text-align: center;
-    }
-
-    .testimonial-header {
-        font-size: 4rem;
-        font-weight: bold;
-        margin-bottom: 40px;
-    }
-
-    .testimonial-slider {
-        display: flex;
-        overflow: hidden;
-        scroll-snap-type: x mandatory;
-        width: 100%;
-    }
-
-    .testimonial-item {
-        flex: 0 0 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 24px;
-        padding: 32px;
-        scroll-snap-align: center;
-        transition: transform 0.3s ease;
-        
-        margin: 0 8px;
-    }
-
-    .testimonial-item:hover {
-        transform: scale(1.05);
-    }
-
-    .testimonial-image {
-        border-radius: 50%;
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        margin-right: 16px;
-    }
-
-    .testimonial-content {
-        text-align: left;
-    }
-
-    .testimonial-content p {
-        font-size: 1.5rem;
-        line-height: 1.75rem;
-    }
-
-    .testimonial-rating {
-        margin-top: 16px;
-        color: #60a5fa;
-        font-size: 1.5rem;
-    }
-
-    .testimonial-name {
-        margin-top: 8px;
-        font-weight: bold;
-        font-size: 1rem;
-    }
-
-    .testimonial-controls {
-        display: flex;
-        justify-content: center;
-        margin-top: 24px;
-    }
-
-    .testimonial-controls button {
-        background-color: #60a5fa;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 8px;
-        border: none;
-        cursor: pointer;
-        margin: 0 8px;
-        font-size: 1rem;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
-
-    .testimonial-controls button:hover {
-        background-color: #3b82f6;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-        .testimonial-item {
-            flex-direction: column;
-            text-align: center;
-            padding: 24px;
-        }
-
-        .testimonial-image {
-            margin-bottom: 16px;
-            margin-right: 0;
-        }
-
-        .testimonial-controls button {
-            padding: 6px 12px;
-            font-size: 1.5rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .testimonial-item {
-            padding: 16px;
-        }
-
-        .testimonial-content p {
-            font-size: 1.3rem;
-        }
-
-        .testimonial-controls button {
-            padding: 4px 8px;
-            font-size: 0.75rem;
-        }
-    }
-</style>
 
 <script is:inline data-astro-reload>
     function initializeTestimonialSlider() {
