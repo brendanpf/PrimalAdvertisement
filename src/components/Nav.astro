@@ -3,6 +3,7 @@ import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
 import '../styles/Nav.css';
+import MenuButton from '../components/MenuButton';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -29,14 +30,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 			<Icon icon="home" color="var(--accent-regular)" size="2.5em" gradient />
 			<h3>Primal Advertisement</h3>
 		</a>
-		<menu-button>
-			<template>
-				<button class="menu-button" aria-expanded="false">
-					<span class="sr-only">Menu</span>
-					<Icon icon="list" />
-				</button>
-			</template>
-		</menu-button>
+
+        <MenuButton client:load>
+          <button class="menu-button" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <Icon icon="list" />
+          </button>
+        </MenuButton>
 	</div>
 	<noscript>
 		<ul class="nav-items">
@@ -117,41 +117,3 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		</div>
 	</div>
 </nav>
-
-<script>
-	class MenuButton extends HTMLElement {
-		constructor() {
-			super();
-
-			// Inject menu toggle button when JS runs.
-			this.appendChild(this.querySelector('template')!.content.cloneNode(true));
-			const btn = this.querySelector('button')!;
-
-			// Hide menu (shown by default to support no-JS browsers).
-			const menu = document.getElementById('menu-content')!;
-			menu.hidden = true;
-			// Add "menu-content" class in JS to avoid covering content in non-JS browsers.
-			menu.classList.add('menu-content');
-
-			/** Set whether the menu is currently expanded or collapsed. */
-			const setExpanded = (expand: boolean) => {
-				btn.setAttribute('aria-expanded', expand ? 'true' : 'false');
-				menu.hidden = !expand;
-			};
-
-			// Toggle menu visibility when the menu button is clicked.
-			btn.addEventListener('click', () => setExpanded(menu.hidden));
-
-			// Hide menu button for large screens.
-			const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {
-				setExpanded(e.matches);
-				btn.hidden = e.matches;
-
-			};
-			const mediaQueries = window.matchMedia('(min-width: 75em)');
-			handleViewports(mediaQueries);
-			mediaQueries.addEventListener('change', handleViewports);
-		}
-	}
-	customElements.define('menu-button', MenuButton);
-</script>

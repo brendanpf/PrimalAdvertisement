@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactCTA from '../components/ContactCTA.astro';
-import TestimonialsComp from '../components/TestimonialsComp.astro'
+import TestimonialsComp from '../components/TestimonialsComp'
 ---
 
 <BaseLayout   
 title="Testimonials | Primal Advertisement"
 description="See what others had to say about Ethans work"
 >
-    <TestimonialsComp />
+    <TestimonialsComp client:load/>
 
     <ContactCTA />
 </BaseLayout>
