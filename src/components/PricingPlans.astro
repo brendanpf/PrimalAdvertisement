@@ -3,13 +3,9 @@ import '../styles/PricingPlans.css';
 import PayPalButton from '../components/PayPalButton';
 ---
 
-<head>
-  <script src="https://www.paypal.com/sdk/js?client-id=YOUR_SANDBOX_CLIENT_ID&currency=EUR"></script>
-</head>
-
 <div class="pricing-container">
   <div class="pricing-header">
-      <h2>Simple, no-tricks pricing</h2>
+      <h2>Three Simple Plans</h2>
       <p>Below are the three standard pricing packages I offer. If none of these suit you or you are looking for a more extensive service, don’t be afraid to contact me for a consultation call and we arrange a custom package that will suit you better!</p>
   </div>
   
@@ -71,7 +67,8 @@ import PayPalButton from '../components/PayPalButton';
                   <p>+ €25 for TikTok</p>
               </p>
               <a href="/basicplan/" class="access-button">Get In Contact</a>
-              <PayPalButton amount="350" client:load />
+              <br>
+              <PayPalButton price="350" client:load />
           </div>
       </div>
       </div>
@@ -132,7 +129,8 @@ import PayPalButton from '../components/PayPalButton';
                   <p>+ €35 for TikTok</p>
               </p>
               <a href="/standardplan/" class="access-button">Get In Contact</a>
-              <PayPalButton amount="500" client:load />
+              <br>
+              <PayPalButton price="500" client:load />
           </div>
       </div>
       </div>
@@ -194,7 +192,7 @@ import PayPalButton from '../components/PayPalButton';
               </p>
               <a href="/customplan/" class="access-button">Get In Contact</a>
           </div>
+        </div>
       </div>
-      </div>
-  </div>
+    </div>
 </div>
