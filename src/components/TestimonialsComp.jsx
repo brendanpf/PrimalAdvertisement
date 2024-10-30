@@ -11,7 +11,7 @@ export default function TestimonialsComp() {
 
   return (
     <div className="testimonial-section">
-      <h2 className="testimonial-header">What Our Clients Say</h2>
+      <h2 className="testimonial-header">What Our Clients Say About Us</h2>
 
       <div className="testimonial-slider">
         {/* Testimonial 1 */}

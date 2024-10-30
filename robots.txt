@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+
+# Allow search engines to crawl everything else
+Allow: /
+
+# Sitemap (if you have one)
+Sitemap: https://www.primaladvertisement.com/sitemap.xml
