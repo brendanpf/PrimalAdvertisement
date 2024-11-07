@@ -11,6 +11,14 @@
 
 >The repository can be found in my github at this link. https://github.com/brendanpf/PrimalAdvertisement .
 
+## Prerequisites
+
+>Node.js v20.16.0
+
+## Frame work
+
+>astro
+>react
 
 ## Installation
 
