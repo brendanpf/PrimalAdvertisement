@@ -15,10 +15,11 @@
 
 >Node.js v20.16.0
 
-## Frame work
+## Technologies Used
 
->astro
->react
+>Astro (for structure and component-based architecture)
+>React (specific components and functionality powered by React)
+>Tailwind CSS (for styling)
 
 ## Installation
 
@@ -72,7 +73,7 @@ below are a list of tools and websites i used to aid me in the design of this we
 
 #### Theme & template:
 
-  https://astro.build/themes/details/portfolio/
+  Free astro template.
 
 #### Tools & websites
 
