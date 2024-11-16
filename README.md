@@ -3,9 +3,9 @@
 
 # Primal Advertisement
 
->This project is a website for a start up company in the field of marketing and media expansion. Designed to showcase and promote what the business can provide for the clients, and also provide a means for clients to get in contact with the business. It provides usefull information like pricing plans and a means to pay for a subscription to the services.
+>This project is a website for a start up company in the field of marketing and media expansion. Designed to showcase and promote what the business can provide for the clients, and also provide a means for clients to get in contact with the business. It provides useful information like pricing plans and a means to pay for a subscription to the services.
 
->This project is based on an astro portfolio template with addition of my own pages, funtions, stylings and usage.
+>This project is based on an astro portfolio template with addition of my own pages, functions, stylings and usage.
 
 >The project website itself is actually in use for a company already.
 
