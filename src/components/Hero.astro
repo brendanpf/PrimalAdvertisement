@@ -1,14 +1,16 @@
 ---
 interface Props {
-	title: string;
-	tagline?: string;
-	align?: 'start' | 'center';
+	title: string;  // Required prop for the main title of the component.
+	tagline?: string; // Optional prop for a supporting tagline below the title.
+	align?: 'start' | 'center'; // Optional prop to define text alignment ('start' for left-aligned, 'center' for centered).
 }
 
-const { align = 'center', tagline, title } = Astro.props;
+const { align = 'center', tagline, title } = Astro.props; // Destructure props with default value for 'align' set to 'center'.
 ---
 
+<!-- Main container with dynamic class list based on alignment -->
 <div class:list={['hero stack gap-4', align]}>
+	<!-- Nested container for the title and tagline -->
 	<div class="stack gap-2">
 		<h1 class="title">{title}</h1>
 		{tagline && <p class="tagline">{tagline}</p>}
@@ -16,6 +18,7 @@ const { align = 'center', tagline, title } = Astro.props;
 	<slot />
 </div>
 
+<!--styling for hero section -->
 <style>
 	.hero {
 		font-size: var(--text-lg);

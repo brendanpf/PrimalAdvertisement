@@ -4,16 +4,20 @@ import '../styles/Footer.css';
 const currentYear = new Date().getFullYear();
 ---
 
+<!-- Footer section for the website -->
 <footer>
 	<div class="group">
 		<p>
 			Designed & Developed with <a href="https://astro.build/">Astro</a>
 			<Icon icon="rocket-launch" size="1.2em" />
 		</p>
-		<p>&copy; {currentYear} Ethan Greene</p>
+		<!-- Dynamically rendered copyright information -->
+		<p>&copy; {currentYear} Primal Advertisement</p>
 		<p>Secure payment with PayPal</p>
 		<Icon icon="paypal" size="1.2em" />
 	</div>
+
+	<!-- Social media links -->
 	<p class="socials">
 		<a href="https://twitter.com"> Twitter</a>
 		<a href="https://www.youtube.com"> YouTube</a>

@@ -1,10 +1,14 @@
 ---
-import Icon from '../components/Icon.astro';
+import Icon from '../components/Icon.astro'; // Import the custom Icon component for rendering icons.
 import '../styles/ContactForm.css';
 ---
 
+<!-- Main container for the contact page with flexible spacing -->
 <div class="contact-page stack gap-20 lg:gap-48">
+  <!-- Wrapper for aligning and spacing the page content -->
     <div class="wrapper stack gap-8 lg:gap-20">
+
+      <!-- Hero section displaying the title, description, and image -->
       <header class="hero">
         <div class="hero-content">
           <h1 class="hero-title">Get in Touch</h1>
@@ -20,8 +24,10 @@ import '../styles/ContactForm.css';
         />
       </header>
 
+      <!-- Contact form section for users to submit their details -->
       <section class="contact-form-section">
         <h2>Contact Me</h2>
+        <!-- Form action points to Formspree API, which handles form submissions -->
         <form class="contact-form" action="https://formspree.io/f/movqqvlv" method="POST">
           <div class="form-group">
             <label for="name">Name:</label>
@@ -30,6 +36,7 @@ import '../styles/ContactForm.css';
 
           <div class="form-group">
             <label for="email">Email:</label>
+            <!-- Required tags do not allow a form to be submitted without this field being filled -->
             <input type="email" id="email" name="email" required />
           </div>
 
@@ -63,6 +70,7 @@ import '../styles/ContactForm.css';
           </li>
         </ul>
 
+        <!-- Social media links for connecting with the user -->
         <div class="social-media-links">
           <h3>Follow Me</h3>
           <div class="socials">

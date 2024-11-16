@@ -1,13 +1,13 @@
-// src/components/Carousel.jsx
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'; // Import React and the useEffect hook for side effects.
 import '../styles/Carousel.css';
-import { initializeCaseStudySlider } from '../scripts-Comps/caseStudySlider';
+import { initializeCaseStudySlider } from '../scripts-Comps/caseStudySlider'; // Import the slider initialization function.
 
 export default function Carousel() {
   useEffect(() => {
+    // useEffect ensures the slider initialization code only runs on the client side.
     if (typeof window !== 'undefined') {
-      initializeCaseStudySlider();
+      initializeCaseStudySlider(); // Initializes the custom slider functionality when the component mounts.
     }
   }, []);
 
@@ -16,6 +16,7 @@ export default function Carousel() {
       <h1 className="caseStudy-header">Case Study</h1>
 
       <div className="caseStudy-slider">
+        {/* Each case study item contains an image. Images are part of the slider and are styled as such. */}
         <div className="caseStudy-item">
           <img
             src="/assets/caseStudy/case-study-1.jpg"
@@ -105,6 +106,7 @@ export default function Carousel() {
         </div>
 
         <div className="caseStudy-item-link">
+           {/* This item is unique because it contains a clickable link wrapping the image. */}
           <a href="/freeinstacall/">
             <img
               src="/assets/caseStudy/case-study-12.jpg"

@@ -1,11 +1,13 @@
 
-import React, { useEffect } from 'react';
-import '../styles/TestimonialsComp.css';
+import React, { useEffect } from 'react'; // Import React and the `useEffect` hook.
+import '../styles/TestimonialsComp.css'; // Import the CSS file for styling the testimonials section.
 
 export default function TestimonialsComp() {
+  // useEffect to initialize the testimonial slider script on component mount.
   useEffect(() => {
-    import('../scripts-Comps/testimonialSlider').then(({ initializeTestimonialSlider }) => {
-      initializeTestimonialSlider();
+    import('../scripts-Comps/testimonialSlider') // Dynamically import the slider script.
+    .then(({ initializeTestimonialSlider }) => {
+      initializeTestimonialSlider(); // Call the initialization function once the script is loaded.
     });
   }, []);
 
@@ -29,7 +31,7 @@ export default function TestimonialsComp() {
               client with his help and the future looks bright."
             </p>
             <div className="testimonial-rating">
-              <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> {/* Unicode stars for rating */}
             </div>
             <p className="testimonial-name">- Christy Costello</p>
           </div>

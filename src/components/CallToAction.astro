@@ -1,17 +1,17 @@
 ---
 interface Props {
-	href: string;
+	href: string; // Define the type for the href prop.
 }
 
-const { href } = Astro.props;
+const { href } = Astro.props;  // Destructure the href prop passed to the component.
 ---
 
 <a href={href}><slot /></a>
 
 <style>
 	a {
-		position: relative;
-		display: flex;
+		position: relative;  /* Enables positioning for pseudo-elements like ::after. */
+		display: flex;  /* Creates a fully rounded (pill-shaped) button. */
 		place-content: center;
 		text-align: center;
 		padding: 0.56em 2em;
@@ -22,10 +22,11 @@ const { href } = Astro.props;
 		border-radius: 999rem;
 		overflow: hidden;
 		background: var(--gradient-accent-orange);
-		box-shadow: var(--shadow-md);
+		box-shadow: var(--shadow-md); /* Adds a shadow effect for a 3D-like appearance. */
 		white-space: nowrap;
 	}
 
+    /* Media query for larger screens (minimum width 20em / 320px). */
 	@media (min-width: 20em) {
 		a {
 			font-size: var(--text-lg);
@@ -42,9 +43,10 @@ const { href } = Astro.props;
 		mix-blend-mode: overlay;
 	}
 
+	/* Adds a semi-transparent overlay when the link is hovered or focused */
 	a:focus::after,
 	a:hover::after {
-		background-color: hsla(var(--gray-999-basis), 0.3);
+		background-color: hsla(var(--gray-999-basis), 0.3); /* Applies a gray overlay with 30% transparency. */
 	}
 
 	@media (min-width: 50em) {

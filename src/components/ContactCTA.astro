@@ -1,12 +1,14 @@
 ---
-import CallToAction from './CallToAction.astro';
-import Icon from './Icon.astro';
+import CallToAction from './CallToAction.astro'; // Import the CallToAction component, which wraps styled links or buttons.
+import Icon from './Icon.astro'; // Import the Icon component to render icons with customizable properties.
 import '../styles/ContactCTA.css';
 ---
 
 <aside>
 	<h2>Interested in working together?</h2>
 	<div class="footer-reactive">
+		{/* The CallToAction component wraps the email link. 
+			It uses a 'mailto' link with pre-filled subject and body to make it easier for users to send an email. */}
 		<CallToAction href="mailto:ethan@primaladvertisement.com?subject=Interested%20in%20collaborating&body=Hi%20Ethan%2C%0A%0AI%20have%20had%20a%20look%20through%20your%20website,%20and%20am%20interested%20in%20working%20with%20you.%20Could%20we%20schedule%20a%20time%20to%20discuss%20further%3F%0A%0AThanks%2C%0A%5BYour%20Name%5D">
 		Send Me a Message
 		<Icon icon="paper-plane-tilt" size="1.2em" />

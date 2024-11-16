@@ -1,6 +1,6 @@
 ---
 import '../styles/PricingPlans.css';
-import PayPalButton from '../components/PayPalButton';
+import PayPalButton from '../components/PayPalButton'; // Import the PayPalButton component for payment integration.
 ---
 
 <div class="pricing-container">
@@ -9,9 +9,10 @@ import PayPalButton from '../components/PayPalButton';
       <p>Below are the three standard pricing packages I offer. If none of these suit you or you are looking for a more extensive service, don’t be afraid to contact me for a consultation call and we arrange a custom package that will suit you better!</p>
   </div>
   
+  <!-- Wrapper for all pricing options -->
   <div class="pricing-options">
       
-      <!-- Pricing Option 1 -->
+      <!-- Pricing Option 1: Basic Plan -->
       <div class="pricing-reactive">
         <div class="pricing-option">
           <div>
@@ -23,6 +24,7 @@ import PayPalButton from '../components/PayPalButton';
               <div class="separator"></div>
           </div>
           <ul>
+            <!-- List of features, each with a checkmark icon -->
               <li>
                 <svg class="checkmark" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><!--Blue Tick On Whats Included -->
                   <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd" />
@@ -68,6 +70,7 @@ import PayPalButton from '../components/PayPalButton';
               </p>
               <a href="/basicplan/" class="access-button">Get In Contact</a>
               <br>
+              <!--PayPal API insertion to page with a price prop for the paypalButton.jsx-->
               <PayPalButton price="350" client:load />
           </div>
       </div>
@@ -130,6 +133,7 @@ import PayPalButton from '../components/PayPalButton';
               </p>
               <a href="/standardplan/" class="access-button">Get In Contact</a>
               <br>
+              <!--PayPal API insertion to page with a price prop for the paypalButton.jsx-->
               <PayPalButton price="500" client:load />
           </div>
       </div>

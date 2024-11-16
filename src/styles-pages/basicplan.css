@@ -1,20 +1,20 @@
 .contact-page .hero {
-    display: flex;
+    display: flex; /* Stack elements vertically by default */
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center-align content */
     gap: 2rem;
     text-align: center;
   }
 
   .contact-page .hero-title {
     font-size: 3.5rem;
-    font-weight: bold;
-    color: var(--gray-100);
+    font-weight: bold; /* Make the title bold */
+    color: var(--gray-100); /* Use theme color */
   }
 
   .contact-page .hero-description {
     font-size: 1.75rem;
-    color: var(--gray-300);
+    color: var(--gray-300); /* Secondary color for description */
   }
 
   .contact-page .hero img {
@@ -24,12 +24,13 @@
     box-shadow: var(--shadow-md);
   }
 
+  /* Responsive styles for larger screens (min-width: 50em) */
   @media (min-width: 50em) {
     .contact-page .hero {
       display: grid;
       grid-template-columns: 6fr 4fr;
       padding-inline: 2.5rem;
-      gap: 3.75rem;
+      gap: 3.75rem; /* Increase gap between text and image */
     }
 
     .contact-page .hero-content {
@@ -37,7 +38,7 @@
     }
 
     .contact-page .hero img {
-      justify-self: flex-end;
+      justify-self: flex-end; /* Align image to the right */
     }
   }
 
@@ -46,7 +47,7 @@
     gap: 2rem;
     background-color: var(--gray-999);
     padding: 2rem;
-    border-radius: 1.5rem;
+    border-radius: 1.5rem; /* Rounded corners */
     box-shadow: var(--shadow-md);
   }
 
@@ -56,7 +57,7 @@
   }
 
   .contact-page .contact-form .form-group {
-    display: flex;
+    display: flex; /* Stack label and input/textarea */
     flex-direction: column;
     gap: 0.5rem;
   }
@@ -127,27 +128,29 @@
     justify-content: flex-start;
   }
 
+  /* Individual social media link styling */
   .contact-page .social {
     color: var(--accent-regular);
     transition: color 0.3s;
   }
 
   .contact-page .social:hover {
-    color: var(--accent-text-over);
+    color: var(--accent-text-over); /* Change color on hover */
   }
 
+  /* Additional responsive styles for larger screens */
   @media (min-width: 50em) {
     .contact-page .contact-form-section,
     .contact-page .contact-details-section {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr); /* Two-column layout */
     }
 
     .contact-page .contact-form h2,
     .contact-page .contact-details-section h2 {
-      font-size: 2.5rem;
+      font-size: 2.5rem; /* Larger heading font size */
     }
 
     .contact-page .contact-info li {
-      font-size: 1.25rem;
+      font-size: 1.25rem; /* Larger text size for contact info */
     }
   }
