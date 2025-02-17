@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/tailwind": "^5.1.1",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/tailwind": "^6.0.0",
     "@paypal/checkout-server-sdk": "^1.0.3",
     "@paypal/paypal-js": "^8.1.2",
-    "astro": "^4.16.18",
+    "astro": "^5.3.0",
     "dompurify": "^3.1.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
